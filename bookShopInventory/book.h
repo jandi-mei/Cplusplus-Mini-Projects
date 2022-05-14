@@ -13,6 +13,7 @@ class book{
     bool search(char t[30], char a[30]);
     void previewBook();
     void buyBook();
+    void editBook();
 };
 
 #endif

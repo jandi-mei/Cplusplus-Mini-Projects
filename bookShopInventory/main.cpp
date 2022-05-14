@@ -46,7 +46,57 @@ int main(){
                         break;
                     }
 
-            default: exit(0);
+            case 3: cin.ignore();
+                    //Search for Book
+                    cout<<"Enter Title: "; cin.getline(title, 30);
+                    cout<<"Enter Author Name: "; cin.getline(author, 30);
+                    for(int y=0; y<= x; y++){
+                        bool exist= bookList[y]->search(title, author);
+                        if(exist){
+                            char ans;
+                            bookList[y]->previewBook();
+                            cout<<"\nEnter 'y' to go back to MENU: "; cin>>ans;
+                            if(ans != ' '){
+                                break;
+                            }
+                        } 
+                        if(y=x && !exist){
+                            w=1;
+                        }  
+                    }
+                    if(w==1){
+                        cout<<"\n\nThe Book is not available!\n"<<endl;
+                        break;
+                    }
+                    else{
+                        break;
+                    }
+
+            case 4: cin.ignore();
+                    //Edit Detials of Book
+                    cout<<"Enter Title: "; cin.getline(title, 30);
+                    cout<<"Enter Author Name: "; cin.getline(author, 30);
+                    for(int y=0; y<= x; y++){
+                        bool exist= bookList[y]->search(title, author);
+                        if(exist){
+                            char ans;
+                            bookList[y]->previewBook();
+                            bookList[y]->editBook();
+                            break;
+                        } 
+                        if(y=x && !exist){
+                            w=1;
+                        }  
+                    }
+                    if(w==1){
+                        cout<<"\n\nThe Book is not available!\n"<<endl;
+                        break;
+                    }
+                    else{
+                        break;
+                    }
+            case 5: exit(0);
+            default: cout<<"Invalid choice!";
         }
 
 

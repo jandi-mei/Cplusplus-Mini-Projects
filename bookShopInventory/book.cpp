@@ -20,7 +20,7 @@ void book::addBook(){
     cout<<"Title of the Book: "; cin.getline(title, 30);
     cout<<"Publisher Name: "; cin.getline(publisher, 30);
     cout<<"Price: "; cin>>*price;
-    cout<<"Stock Position: "; cin>>*stockNo;
+    cout<<"Stock Number: "; cin>>*stockNo;
 
     cout<<"New Book Details was Added Successfully!"<<endl;
 
@@ -63,4 +63,15 @@ void book::buyBook(){
 
 
 
+}
+
+void book::editBook(){
+    cout<<"\nEnter New Details for this Book\n"<<endl;
+    cout<<"Author Name: "; cin.getline(author, 30);
+    cout<<"Title of the Book: "; cin.getline(title, 30);
+    cout<<"Publisher Name: "; cin.getline(publisher, 30);
+    cout<<"Price: "; cin>>*price;
+    cout<<"Stock Number: "; cin>>*stockNo;
+
+    cout<<"\n\nEdit saved successfully!"<<endl;
 }
